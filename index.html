@@ -115,45 +115,6 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2023/03/24/2023.3.24/" itemprop="url">更改过的电脑清理大师代码(无害)</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2023-03-24T14:12:20.247Z" itemprop="datePublished">Mar 24 2023</time>
-            
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            2 minutes read (About 314 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <html><head></head><body><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>毕竟考虑到电脑清理大师对于你们的电脑来说是一种摧残<br>于是我更改了代码(对电脑无害,重启电脑即可)</p>
-<h2 id="Program-Here"><a href="#Program-Here" class="headerlink" title="Program Here:"></a>Program Here:</h2><figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> time,random,pickle,datetime</span><br><span class="line"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *</span><br><span class="line"><span class="hljs-keyword">import</span> os</span><br><span class="line"><span class="hljs-keyword">from</span> tkinter.scrolledtext <span class="hljs-keyword">import</span> ScrolledText</span><br><span class="line"><span class="hljs-keyword">import</span> tkinter.messagebox </span><br><span class="line"><span class="hljs-keyword">import</span> sys</span><br><span class="line"><span class="hljs-keyword">def</span> <span class="title function_">delete</span>():</span><br><span class="line">    a=tkinter.messagebox.askquestion(title=<span class="hljs-string">'来自世德的温馨提示'</span>,message=<span class="hljs-string">'是否清理您的电脑?'</span>)</span><br><span class="line">    <span class="hljs-keyword">if</span> a==<span class="hljs-string">'yes'</span>:</span><br><span class="line">        os.system(<span class="hljs-string">'taskkill /f /im explorer.exe'</span>)</span><br><span class="line">tk=Tk()</span><br><span class="line">tk.title(<span class="hljs-string">'世德电脑清理大师 1.0.0'</span>)</span><br><span class="line">tk.wm_attributes(<span class="hljs-string">'-topmost'</span>,<span class="hljs-literal">True</span>)</span><br><span class="line">tk.resizable(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)</span><br><span class="line"><span class="hljs-comment">#tk.overrideredirect(1)</span></span><br><span class="line">canvas=Canvas(tk,width=<span class="hljs-number">500</span>,height=<span class="hljs-number">450</span>)</span><br><span class="line">canvas.pack()</span><br><span class="line">image_file=PhotoImage(file=<span class="hljs-string">"C:\安禹泽\编程\项目\python exe\世德电脑清理大师(非exe)\dj.gif"</span>)</span><br><span class="line">image=canvas.create_image(<span class="hljs-number">150</span>,<span class="hljs-number">25</span>,anchor=<span class="hljs-string">'nw'</span>,image=image_file)</span><br><span class="line">canvas.create_text(<span class="hljs-number">270</span>,<span class="hljs-number">220</span>,text=<span class="hljs-string">'哎呀，今天心情不好，电脑里的资料全被删了…'</span>,fill=<span class="hljs-string">'black'</span>,font=(<span class="hljs-string">'微软雅黑'</span>,<span class="hljs-number">15</span>))</span><br><span class="line">Button=Button(tk,text=<span class="hljs-string">'一键清理您的电脑(世德の威力)'</span>, command=delete,height=<span class="hljs-number">2</span>,width=<span class="hljs-number">17</span>,relief=<span class="hljs-string">'flat'</span>,font=(<span class="hljs-string">'微软雅黑'</span>,<span class="hljs-number">10</span>)</span><br><span class="line">                                        ,bd=<span class="hljs-number">1</span>,fg=<span class="hljs-string">'white'</span>,bg=<span class="hljs-string">'red'</span>)</span><br><span class="line">Button.place(x=<span class="hljs-number">150</span>,y=<span class="hljs-number">300</span>)</span><br><span class="line">tk.mainloop()</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="How-to-run-it"><a href="#How-to-run-it" class="headerlink" title="How to run it"></a>How to run it</h2><p>如果你的电脑上<b>有Python</b>那么请继续阅读<br>复制以上代码到一个新的文本文件中,保存时将后缀改为.py</p>
-<p>双击即可运行.(运行之前确保电脑没有未保存的文件,运行之后重启电脑即可)</p>
-</body></html>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
             <a href="/2023/03/21/test1/" itemprop="url">这篇简介十分甚至九分的重要</a>
         
     </h1>
