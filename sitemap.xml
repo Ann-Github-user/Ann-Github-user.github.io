@@ -2,18 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ann-github-user.github.io/others/install_app.html</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ann-github-user.github.io/2023/03/21/test1/</loc>
     
-    <lastmod>2023-03-31</lastmod>
+    <lastmod>2023-04-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,14 +13,23 @@
   <url>
     <loc>https://ann-github-user.github.io/programs/2023.3.24.html</loc>
     
-    <lastmod>2023-03-31</lastmod>
+    <lastmod>2023-04-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ann-github-user.github.io/life/index.html</loc>
+    <loc>https://ann-github-user.github.io/others/install_app.html</loc>
+    
+    <lastmod>2023-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ann-github-user.github.io/articles/index.html</loc>
     
     <lastmod>2023-03-26</lastmod>
     
@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://ann-github-user.github.io/</loc>
-    <lastmod>2023-03-31</lastmod>
+    <lastmod>2023-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
