@@ -21,7 +21,6 @@
 	<body>
 		<div>
 			<h1 id="top_text">Calculator</h1>
-			<h3 id="top_text">按下Enter即可刷新答案</h3>
 			<span>数字a:</span><br>
 			<input type="text" placeholder="请键入数字" id="a" onkeydown="line()">
 			<br><span>运算符:</span><br>
@@ -39,7 +38,8 @@
 			<b id="one">❌</b><strong> 键入第一个数字</strong>
 			<b id="two">❌</b><strong> 键入第二个数字</strong>
 			<br><b id="result"></b>
-		</div>
+		</div><br><br>
+		<h4>© 2023 Lantern,All Rights Reserved.</h4>
 		<script type="text/javascript">
 			function doClear() {
 				let inputs = document.getElementsByTagName("input");
@@ -81,10 +81,10 @@
 				}
 				else document.getElementById("result").textContent="";
 			}
-			document.getElementById('a').addEventListener('click',function(){line()});
-			document.getElementById('').addEventListener('click',function(){line()});
-			document.getElementById('b').addEventListener('click',function(){line()});
-			document.getElementsByTagName('option').addEventListener('click',function(){line()});
+			function change() {
+				nIntervId = setInterval(function(){line(),process()}, 50);
+			}
+			change()
 		</script>
 	</body>
 </html>

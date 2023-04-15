@@ -4,7 +4,16 @@
   <url>
     <loc>https://ann-github-user.github.io/2023/03/21/test1/</loc>
     
-    <lastmod>2023-04-14</lastmod>
+    <lastmod>2023-04-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ann-github-user.github.io/configuration/config_main.json</loc>
+    
+    <lastmod>2023-04-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>https://ann-github-user.github.io/</loc>
-    <lastmod>2023-04-14</lastmod>
+    <lastmod>2023-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -1,4 +1,5 @@
 https://ann-github-user.github.io/2023/03/21/test1/
+https://ann-github-user.github.io/configuration/config_main.json
 https://ann-github-user.github.io/others/about.html
 https://ann-github-user.github.io/others/install_app.html
 https://ann-github-user.github.io/others/advanced_contents.html
