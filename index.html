@@ -134,26 +134,15 @@
         <span class="column is-narrow">
             
             
-            4 minutes read (About 623 words)
+            5 minutes read (About 680 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p><img id="imgs" src=""></p>
+        <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"></p>
 <script>
-    var items_yyzt = ['https://pic4.zhimg.com/80/v2-c531bde86d6c9e2be33e434e4f5afd3b_1440w.webp',
-    "https://pic2.zhimg.com/80/v2-7b7cb89e0385217d1e93fd12cc0e4c91_1440w.webp",
-    "https://pic1.zhimg.com/80/v2-f56f4de505ad31184851fa110d72de9c_1440w.webp",
-    "https://pic1.zhimg.com/80/v2-9dbe1f43ce1d260801f64ab8c3aa69e0_1440w.webp",
-    "https://pic4.zhimg.com/80/v2-0ee4b4d43df620a3ca7adc7aac83169b_1440w.webp",
-    "https://pic3.zhimg.com/80/v2-356df20a71494822c986867ad398c6d6_1440w.webp",
-    "https://pic4.zhimg.com/80/v2-47f439309db5623886de628adca366a7_1440w.webp",
-    "https://pic3.zhimg.com/80/v2-a455a6dcae602250a6ed7af41d964d4a_1440w.webp",
-    "https://pic2.zhimg.com/80/v2-b4b9a36ea5eaec0f089ffc07f173a505_1440w.webp",
-    "https://pic1.zhimg.com/80/v2-3ad92075c9abb9e2a50eff7ea76666f8_1440w.webp"];
-    var item = items_yyzt[Math.floor(Math.random()*items_yyzt.length)];
-    document.getElementById('imgs').src=item;
+    
 </script>
 
 <h2 id="一些你可能需要的网站…"><a href="#一些你可能需要的网站…" class="headerlink" title="一些你可能需要的网站…"></a>一些你可能需要的网站…</h2><p><a href="/others/about">简介(建议阅读)</a><br><a href="/others/install_app">学习编程以及运行我上传的程序所需软件</a><br><a href="others/calculator.html">计算器(貌似啥都算不了)</a></p>
@@ -164,10 +153,10 @@
 <!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=1871073930&auto=1&height=32"></iframe>
 
 
-        <div id="aplayer-xGdGUcyM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-CQCfJQXr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"single","theme":"#1d6a96","preload":"metadata","music":[{"title":"Music(Will Be Updated When Site Is Updated)","author":" ","url":"https://www.ytmp3.cn/down/50974.mp3","pic":""}]};
-				  options.element = document.getElementById("aplayer-xGdGUcyM");
+				  options.element = document.getElementById("aplayer-CQCfJQXr");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -200,6 +189,38 @@
         }]
     });*/
     alert("最近本人因为学业繁忙,此网站将暂时暂停更新,你可以时常访问网站,如果没有出现此消息,则恢复更新")
+    function getimg(){
+        var items_yyzt = ['https://pic4.zhimg.com/80/v2-c531bde86d6c9e2be33e434e4f5afd3b_1440w.webp',
+        "https://pic2.zhimg.com/80/v2-7b7cb89e0385217d1e93fd12cc0e4c91_1440w.webp",
+        "https://pic1.zhimg.com/80/v2-f56f4de505ad31184851fa110d72de9c_1440w.webp",
+        "https://pic1.zhimg.com/80/v2-9dbe1f43ce1d260801f64ab8c3aa69e0_1440w.webp",
+        "https://pic4.zhimg.com/80/v2-0ee4b4d43df620a3ca7adc7aac83169b_1440w.webp",
+        "https://pic3.zhimg.com/80/v2-356df20a71494822c986867ad398c6d6_1440w.webp",
+        "https://pic4.zhimg.com/80/v2-47f439309db5623886de628adca366a7_1440w.webp",
+        "https://pic3.zhimg.com/80/v2-a455a6dcae602250a6ed7af41d964d4a_1440w.webp",
+        "https://pic2.zhimg.com/80/v2-b4b9a36ea5eaec0f089ffc07f173a505_1440w.webp",
+        "https://pic1.zhimg.com/80/v2-3ad92075c9abb9e2a50eff7ea76666f8_1440w.webp"];
+        var item = items_yyzt[Math.floor(Math.random()*items_yyzt.length)];
+        document.getElementById('imgs').src=item;
+    }
+    function diedown(){
+        var i_;
+        sa=setInterval(function(){document.getElementById('imgs').style="opacity:0."+i_.toString()+";";
+        i_=i_-1;
+        if(i_<=0)clearInterval(sa)},200);
+    }
+    function comeup(){
+        var i_;
+        sb=setInterval(function(){document.getElementById('imgs').style="opacity:0."+i_.toString()+";";
+        i_=i_+1;
+        if(i_>=9)clearInterval(sb)},200);
+        document.getElementById('imgs').style="opacity:1.0;";
+    }
+    function flash(){
+        nIntervId = setInterval(function(){diedown();getimg();comeup()}, 6000);
+    }
+    getimg()
+    flash()
 </script></body></html>
     
     </div>
