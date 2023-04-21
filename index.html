@@ -134,7 +134,7 @@
         <span class="column is-narrow">
             
             
-            5 minutes read (About 680 words)
+            5 minutes read (About 760 words)
         </span>
         
     </div>
@@ -153,10 +153,10 @@
 <!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=1871073930&auto=1&height=32"></iframe>
 
 
-        <div id="aplayer-CQCfJQXr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-xCWaXEkp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"single","theme":"#1d6a96","preload":"metadata","music":[{"title":"Music(Will Be Updated When Site Is Updated)","author":" ","url":"https://www.ytmp3.cn/down/50974.mp3","pic":""}]};
-				  options.element = document.getElementById("aplayer-CQCfJQXr");
+				  options.element = document.getElementById("aplayer-xCWaXEkp");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -189,6 +189,7 @@
         }]
     });*/
     alert("最近本人因为学业繁忙,此网站将暂时暂停更新,你可以时常访问网站,如果没有出现此消息,则恢复更新")
+    var last_='';
     function getimg(){
         var items_yyzt = ['https://pic4.zhimg.com/80/v2-c531bde86d6c9e2be33e434e4f5afd3b_1440w.webp',
         "https://pic2.zhimg.com/80/v2-7b7cb89e0385217d1e93fd12cc0e4c91_1440w.webp",
@@ -199,25 +200,46 @@
         "https://pic4.zhimg.com/80/v2-47f439309db5623886de628adca366a7_1440w.webp",
         "https://pic3.zhimg.com/80/v2-a455a6dcae602250a6ed7af41d964d4a_1440w.webp",
         "https://pic2.zhimg.com/80/v2-b4b9a36ea5eaec0f089ffc07f173a505_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-3ad92075c9abb9e2a50eff7ea76666f8_1440w.webp"];
-        var item = items_yyzt[Math.floor(Math.random()*items_yyzt.length)];
+        "https://pic1.zhimg.com/80/v2-3ad92075c9abb9e2a50eff7ea76666f8_1440w.webp",
+        "https://pic3.zhimg.com/80/v2-2a98f12ae476403c59ececd3366dd1fe_1440w.webp",
+        "https://pic4.zhimg.com/80/v2-94d73d8147e0ba6ba67da075424a879f_1440w.webp",
+        "https://pic1.zhimg.com/80/v2-ee35812cbaa59ea1cc51cdea6b485498_1440w.webp",
+        "https://pic1.zhimg.com/80/v2-e2b0051ca04a56e1839eb3d35a8ba2b0_1440w.webp",
+        ""];
+        var item='';
+        function choose(){item = items_yyzt[Math.floor(Math.random()*items_yyzt.length)];}
+        choose()
+        if(item==last_) choose();
+        else last_=item;
         document.getElementById('imgs').src=item;
+        document.getElementById('imgs').style="opacity:0.0;";
     }
-    function diedown(){
-        var i_;
-        sa=setInterval(function(){document.getElementById('imgs').style="opacity:0."+i_.toString()+";";
-        i_=i_-1;
-        if(i_<=0)clearInterval(sa)},200);
-    }
+    var up_down=true;
+    var l_=0;
+    var timesnow=0;
     function comeup(){
-        var i_;
-        sb=setInterval(function(){document.getElementById('imgs').style="opacity:0."+i_.toString()+";";
-        i_=i_+1;
-        if(i_>=9)clearInterval(sb)},200);
-        document.getElementById('imgs').style="opacity:1.0;";
+        document.getElementById('imgs').style="opacity:0."+l_.toString()+";";
+        if(up_down==true){
+                if(l_+1<=9)
+                l_=l_+1;
+        }
+        else l_=l_-1;
+        if(l_>=9){
+            document.getElementById('imgs').style="opacity:1.0;";
+            if(timesnow>=80)
+            {
+                    timesnow=0;
+                    up_down=false;
+            }
+            else timesnow=timesnow+1;
+            }
+        if(l_<=0){
+            getimg()
+            up_down=true;
+        }
     }
     function flash(){
-        nIntervId = setInterval(function(){diedown();getimg();comeup()}, 6000);
+        nIntervId = setInterval(function(){comeup()}, 100);
     }
     getimg()
     flash()
