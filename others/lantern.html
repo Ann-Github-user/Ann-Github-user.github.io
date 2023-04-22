@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Lantern</title>
+    <style>
+        #title{
+            color: rgb(0, 0, 0);
+            margin-left: 35%;
+            margin-top: 10%;
+            font-size: 100px;
+        }
+        #line_top{
+            color: aliceblue;
+            margin-left: 20%;
+            margin-top: auto;
+            
+        }
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0)">
+    <strong><h1 id="title">Lantern</h1></strong>
+    <hr width="60%" size="5" id="line_top" >
+
+
+
+
+    <script>
+        var r=0,g=0,b=0,upper=true,vary=1;;
+        function down_color(){
+            if(b-vary>=0) b=b-vary
+            else{
+                if(r-vary>=0) r=r-vary
+                else{
+                    if(g-vary>=0) g=g-vary;
+                    else upper=true
+                }
+            }
+        }
+        function up_color(){
+        document.getElementById('title').style="color:rgb("+r.toString()+","+g.toString()+","+b.toString()+")";
+        if(upper==true){
+            if(b+vary<=255) b=b+vary;
+            else{
+                if(r+vary<=255) r=r+vary;
+                else{
+                    if(g+vary<=255) g=g+vary;
+                    else upper=false
+                }
+            }
+        }
+        else down_color()
+        }
+        function flash(){
+            nIntervId = setInterval(function(){up_color()}, 1);
+        }
+        flash()
+    </script>
+</body>
