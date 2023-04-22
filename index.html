@@ -134,7 +134,7 @@
         <span class="column is-narrow">
             
             
-            5 minutes read (About 790 words)
+            4 minutes read (About 550 words)
         </span>
         
     </div>
@@ -153,10 +153,10 @@
 
 <!--
 
-        <div id="aplayer-xBYlFEIV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-avONrexu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"single","theme":"#1d6a96","preload":"metadata","music":[{"title":"Music(Will Be Updated When Site Is Updated)","author":" ","url":"https://other-player-nf01-sycdn.kuwo.cn/c56f75a37c6394eba3fbe4c1fa0ff8b0/644390e9/resource/n2/43/96/4107129112.mp3?bitrate$1&format$mp3&type$convert_url2","pic":""}]};
-				  options.element = document.getElementById("aplayer-xBYlFEIV");
+				  options.element = document.getElementById("aplayer-avONrexu");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -172,7 +172,10 @@
 
 <div id="aplayer"></div>
 <script src="APlayer.min.js"></script>
-<script>
+<script src="https://ann-github-user.github.io/js/get_img.js">
+    getimg();
+    document.getElementById('imgs').src=item;
+    document.getElementById('imgs').style="opacity:0.0;";
     const ap = new APlayer({
         container: document.getElementById('aplayer'),
         fixed: true,                //是否附着页面底部，否为false
@@ -188,31 +191,6 @@
         }]
     });
     alert("最近本人因为学业繁忙,此网站将暂时暂停更新,你可以时常访问网站,如果没有出现此消息,则恢复更新")
-    var last_='';
-    function getimg(){
-        var items_yyzt = ['https://pic4.zhimg.com/80/v2-c531bde86d6c9e2be33e434e4f5afd3b_1440w.webp',
-        "https://pic2.zhimg.com/80/v2-7b7cb89e0385217d1e93fd12cc0e4c91_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-f56f4de505ad31184851fa110d72de9c_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-9dbe1f43ce1d260801f64ab8c3aa69e0_1440w.webp",
-        "https://pic4.zhimg.com/80/v2-0ee4b4d43df620a3ca7adc7aac83169b_1440w.webp",
-        "https://pic3.zhimg.com/80/v2-356df20a71494822c986867ad398c6d6_1440w.webp",
-        "https://pic4.zhimg.com/80/v2-47f439309db5623886de628adca366a7_1440w.webp",
-        "https://pic3.zhimg.com/80/v2-a455a6dcae602250a6ed7af41d964d4a_1440w.webp",
-        "https://pic2.zhimg.com/80/v2-b4b9a36ea5eaec0f089ffc07f173a505_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-3ad92075c9abb9e2a50eff7ea76666f8_1440w.webp",
-        "https://pic3.zhimg.com/80/v2-2a98f12ae476403c59ececd3366dd1fe_1440w.webp",
-        "https://pic4.zhimg.com/80/v2-94d73d8147e0ba6ba67da075424a879f_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-ee35812cbaa59ea1cc51cdea6b485498_1440w.webp",
-        "https://pic1.zhimg.com/80/v2-e2b0051ca04a56e1839eb3d35a8ba2b0_1440w.webp",
-        ];
-        var item='';
-        function choose(){item = items_yyzt[Math.floor(Math.random()*items_yyzt.length)];}
-        choose()
-        if(item==last_) choose();
-        else last_=item;
-        document.getElementById('imgs').src=item;
-        document.getElementById('imgs').style="opacity:0.0;";
-    }
     var up_down=true;
     var l_=0;
     var timesnow=0;
