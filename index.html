@@ -134,7 +134,7 @@
         <span class="column is-narrow">
             
             
-            11 minutes read (About 1678 words)
+            13 minutes read (About 1923 words)
         </span>
         
     </div>
@@ -149,10 +149,10 @@
 
 <!--
 
-        <div id="aplayer-UqMBrtJo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-OPytTxQs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"single","theme":"#1d6a96","preload":"metadata","music":[{"title":"Music(Will Be Updated When Site Is Updated)","author":" ","url":"https://other-player-nf01-sycdn.kuwo.cn/c56f75a37c6394eba3fbe4c1fa0ff8b0/644390e9/resource/n2/43/96/4107129112.mp3?bitrate$1&format$mp3&type$convert_url2","pic":""}]};
-				  options.element = document.getElementById("aplayer-UqMBrtJo");
+				  options.element = document.getElementById("aplayer-OPytTxQs");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -230,20 +230,31 @@ var item_mswlm=[['https://pic1.zhimg.com/80/v2-212c771fcfbbb984be53f3a564908b24_
 'https://pic1.zhimg.com/80/v2-a2901996a0d7ae1e50843a7e4221ea58_1440w.webp',
 'https://pic2.zhimg.com/80/v2-f40bfbdd687c03f32b134d60ba6178b9_1440w.webp',
 'https://pic2.zhimg.com/80/v2-7e0eb6a2cdbba98f6cdb614c6000cfad_1440w.webp',
-'https://pic1.zhimg.com/80/v2-db1b4b0acad986cf6ced5585318b42a8_1440w.webp',
+'https://pic3.zhimg.com/80/v2-a7ff66c6860f0146935c92e7bdd13986_1440w.webp',
+'https://pic4.zhimg.com/80/v2-32066b79dd26280cc30890f3cca80767_1440w.webp',
 'https://pic3.zhimg.com/80/v2-420c58486e3bdb1267373e87e6d44d12_1440w.webp'],[['http://freetyst.nf.migu.cn/public/product5th/product31/2019/04/25/2018%E5%B9%B411%E6%9C%8809%E6%97%A516%E7%82%B920%E5%88%86%E6%89%B9%E9%87%8F%E9%A1%B9%E7%9B%AE%E6%AD%A3%E4%B8%9C96%E9%A6%96-3/%E6%A0%87%E6%B8%85%E9%AB%98%E6%B8%85/MP3_128_16_Stero/6005661LHB5.mp3','《秒速五厘米》主题曲','山崎将义']],['《秒速五厘米》(《5 cm per second》)']]
-    var chosen_item,themes=['yyzt','ndmz','tqzz','ms']
+var item_lyzl=[['https://i0.hdslb.com/bfs/article/b425a19c75756ca9e62481d128818a925060fb2d.jpg@942w_395h_progressive.webp',
+'https://i0.hdslb.com/bfs/article/906f79b7544ecdc5de55f532952930869db289b5.jpg@942w_395h_progressive.webp',
+'https://pic1.zhimg.com/80/v2-fdf203f8c3747ee7fd85f24eea6a7d6c_1440w.webp',
+'https://pic3.zhimg.com/80/v2-c6b5c997f100319503174f9d7480e512_1440w.webp',
+'https://i0.hdslb.com/bfs/article/8d5ddeec83fd8f2022dc2eea0315b3914654bd66.jpg@942w_395h_progressive.webp',
+'https://i0.hdslb.com/bfs/article/576ac4ff09fed48a28e9876f356c17c748e8996a.jpg@942w_395h_progressive.webp',
+'https://i0.hdslb.com/bfs/article/71923fda322034028398220c540896c48da8adf7.jpg@942w_395h_progressive.webp',
+'https://i0.hdslb.com/bfs/article/dd6591b23839eebb7ec8766dc6cb8ec49833fd63.jpg@942w_393h_progressive.webp']
+,[['http://freetyst.nf.migu.cn/public/product9th/product46/2022/10/2614/2022%E5%B9%B410%E6%9C%8826%E6%97%A514%E7%82%B933%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E7%B1%B3%E4%B8%9D%E5%85%8B2%E9%A6%96326964/%E6%A0%87%E6%B8%85%E9%AB%98%E6%B8%85/MP3_320_16_Stero/6998719Z087145932.mp3','《铃芽之旅》电影主题曲','RADWIMPS']]
+,['《铃芽之旅》(《Suzume》)']]
+    var chosen_item,themes=['yyzt','ndmz','tqzz','ms','lyzl']
     var choose_theme=themes[Math.floor(Math.random()*themes.length)]
-    if(choose_theme=='yyzt') chosen_item=items_yyzt
-    if(choose_theme=='ndmz') chosen_item=items_ndmz
-    if(choose_theme=='tqzz') chosen_item=items_tqzz
-    if(choose_theme=='ms') chosen_item=item_mswlm
+    if(choose_theme=='yyzt') chosen_item=items_yyzt if(choose_theme=='ndmz') chosen_item=items_ndmz
+    if(choose_theme=='tqzz') chosen_item=items_tqzz if(choose_theme=='ms') chosen_item=item_mswlm
+    if(choose_theme=='lyzl') chosen_item=item_lyzl
+    var item='',last_='';
     function getimg(){
-        var item='',last_='';
         function choose(){item = chosen_item[0][Math.floor(Math.random()*chosen_item[0].length)];}
         choose()
+        if(item==last_) choose()
         last_=item;
-        return last_;
+        return item;
     }
     s=getimg()
     document.getElementById('imgs').src=s;
