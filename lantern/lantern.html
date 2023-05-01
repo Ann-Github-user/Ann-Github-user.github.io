@@ -66,10 +66,32 @@
         </article>
         </h3>
     </h3>
+    <div id="aplayer"></div></body>
+    <script src="APlayer.min.js"></script>
+    
     <strong><i id="common_txt">© 2023 Lantern,All Rights Reserved.</i></strong>
+
 </body>
 
+
+
 <script>
+    var ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: false,                //是否附着页面底部，否为false
+        autoplay: true,             //是否自动播放，否为false,移动端不能生效
+        order: 'single',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        listFolded: false,          //列表默认折叠，开启为true
+        theme: '#0e64b0',           //主题颜色
+        audio: [
+            {
+            name: "冬の花",
+            artist: "宮本浩次",
+            url: "http://freetyst.nf.migu.cn/public/product4th/product36/2019/09/1820/2019%E5%B9%B402%E6%9C%8812%E6%97%A510%E7%82%B929%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E6%AD%A3%E4%B8%9C9%E9%A6%96/%E6%A0%87%E6%B8%85%E9%AB%98%E6%B8%85/MP3_320_16_Stero/6005661TWHD.mp3",         //歌曲源文件地址
+            cover:"https://d.musicapp.migu.cn//prod/file-service/file-down/b1899d500dda5db2da11df3efc89cba6/4b69b5c88a0cb404ec0a4e2dd76018ba/455047596fadb4477c054ba5b422f5dd"
+        }]
+    });
     var r=0,g=0,b=0,upper=true,vary=1;;
     function down_color(){
         if(b-vary>=0) b=b-vary
