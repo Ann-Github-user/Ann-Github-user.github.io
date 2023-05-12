@@ -1,3 +1,4 @@
+https://ann-github-user.github.io/configuration/games/allstargame.json
 https://ann-github-user.github.io/2023/03/21/test1/
 https://ann-github-user.github.io/configuration/config_main.json
 https://ann-github-user.github.io/others/cmd.html
