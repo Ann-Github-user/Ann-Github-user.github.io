@@ -134,18 +134,18 @@
         <span class="column is-narrow">
             
             
-            14 minutes read (About 2112 words)
+            14 minutes read (About 2154 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"><br><i id="about_"><b></b></i></p>
+        <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"><br><i id="about_"><b></b></i><br><input id="button" type="button" value="切换主题" onclick="change_style();"></p>
 <!--
-        <div id="aplayer-PxycCMeJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-OBCAtqNy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[]};
-				  options.element = document.getElementById("aplayer-PxycCMeJ");
+				  options.element = document.getElementById("aplayer-OBCAtqNy");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -162,7 +162,7 @@
 
 <p><a href="/others/install_app">学习编程以及运行我上传的程序所需软件🧑‍💻</a></p>
 <p><a href="others/calculator.html">计算器(貌似啥都算不了)😅</a></p>
-<p><i>*此网站由<a href="/lantern/lantern.html">Lantern Studio</a>进行更新和维护.</i><br><input id="button" type="button" value="切换主题" onclick="change_style();"></p>
+<p><i>*此网站由<a href="/lantern/lantern.html">Lantern Studio</a>进行更新和维护.</i></p>
 <script>
     //alert("最近本人因为学业繁忙,此网站将暂时暂停更新(指没有新程序上传),你可以时常访问网站,如果没有出现此消息,则恢复更新")
 
@@ -213,6 +213,8 @@ var items_ndmz=[['https://pic2.zhimg.com/80/v2-4b6432b06430b33147bb84fdf4c644fd_
 
 //天气之子
 var items_tqzz=[['https://pic3.zhimg.com/80/v2-906d2374e4d79063a398c8eaf8782a36_1440w.webp',
+'https://pic4.zhimg.com/80/v2-ab05cf536b6043e4ba0905584391a7a7_1440w.webp',
+'https://pic4.zhimg.com/80/v2-080b8ec8850cfe0ffe3080e6f8b9571f_1440w.webp',
 'https://pic1.zhimg.com/80/v2-b55b9eb82170363437695c6c965e2304_1440w.webp',
 'https://pic2.zhimg.com/80/v2-c83a3f0387b2bd9087a3251452030661_1440w.webp',
 'https://pic3.zhimg.com/80/v2-f689cae230b076a58b74e394c4e305fa_1440w.webp',
@@ -256,7 +258,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
 ,'《速度与激情 7》电影主题曲','Charile Puth']],['《速度与激情 7》(《Fast and Furious 7》)']]
 
 
-    var chosen_item,themes=['yyzt','ndmz','tqzz','ms','lyzl'],last_theme=''
+    var chosen_item,themes=['yyzt','ndmz','tqzz','ms','lyzl','ms','ndmz','tqzz'],last_theme='',_last_theme=''
     function get_theme(){
     var choose_theme=themes[Math.floor(Math.random()*themes.length)]
     if(choose_theme=='yyzt') chosen_item=items_yyzt 
@@ -268,6 +270,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
     }
     get_theme()
     last_theme=chosen_item
+    
     var item='',last_='',_last_='';
     function getimg(){
         function choose(){item = chosen_item[0][Math.floor(Math.random()*chosen_item[0].length)];}
@@ -299,8 +302,9 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
     });
     function change_style(){
         get_theme()
-        while(chosen_item==last_theme) get_theme()
+        while(chosen_item==last_theme || chosen_item==_last_theme) get_theme()
         last_theme=chosen_item
+        _last_theme=last_theme
         s=getimg()
         document.getElementById('imgs').src=s;
         document.getElementById('imgs').style="opacity:0.0;";
