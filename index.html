@@ -134,18 +134,22 @@
         <span class="column is-narrow">
             
             
-            15 minutes read (About 2299 words)
+            15 minutes read (About 2307 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"><br><i id="about_"><b></b></i><br><input id="button" type="button" value="切换主题" onclick="change_style();"></p>
+<video>
+  <source src="">
+</video>
+
 <!--
-        <div id="aplayer-ZjlvlJzi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-ZAfgSTCk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[]};
-				  options.element = document.getElementById("aplayer-ZjlvlJzi");
+				  options.element = document.getElementById("aplayer-ZAfgSTCk");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -281,11 +285,12 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
     get_theme()
     last_theme=chosen_item
     
-    var item='',last_='',_last_='';
+    var item='',last_='',_last_='',last_three='';
     function getimg(){
         function choose(){item = chosen_item[0][Math.floor(Math.random()*chosen_item[0].length)];}
         choose()
-        while(item==last_ || item==_last_) choose()
+        while(item==last_ || item==_last_ || item==last_three) choose()
+        last_three=_last_
         _last_=last_;
         last_=item;
         return item;
@@ -307,7 +312,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
             name: chosen_item[1][0][1],           //歌曲名称
             artist: chosen_item[1][0][2],       //歌曲作者
             url: chosen_item[1][0][0],         //歌曲源文件地址
-            cover:chosen_item[0][1]
+            cover:chosen_item[0][0]
         }]
     });
     function change_style(){
@@ -333,7 +338,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
             name: chosen_item[1][0][1],           //歌曲名称
             artist: chosen_item[1][0][2],       //歌曲作者
             url: chosen_item[1][0][0],         //歌曲源文件地址
-            cover:chosen_item[0][1]
+            cover:chosen_item[0][0]
         }]
         });
     }

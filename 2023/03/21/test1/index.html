@@ -16,15 +16,15 @@
 
 
 
-    <meta name="description" content="一些你可能需要的网站…简介(建议阅读)📘   学习编程以及运行我上传的程序所需软件🧑‍💻 计算器(貌似啥都算不了)😅 *此网站由Lantern Studio进行更新和维护.      &#x2F;&#x2F;alert(&quot;最近本人因为学业繁忙,此网站将暂时暂停更新(指没有新程序上传),你可以时常访问网站,如果没有出现此消息,则恢复更新&quot;)      &#x2F;&#x2F;document.getElement">
+    <meta name="description" content="一些你可能需要的网站…简介(建议阅读)📘   学习编程以及运行我上传的程序所需软件🧑‍💻 计算器(貌似啥都算不了)😅 *此网站由Lantern Studio进行更新和维护.      &#x2F;&#x2F;alert(&quot;最近本人因为学业繁忙,此网站将暂时暂停更新(指没有新程序上传),你可以时常访问网站,如果没有出现此消息,则恢复更新&quot;)      &#x2F;&#x2F;document.getE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Welcome To My Website 🎈">
 <meta property="og:url" content="https://ann-github-user.github.io/2023/03/21/test1/index.html">
 <meta property="og:site_name" content="R🐟Ze 的个人网站">
-<meta property="og:description" content="一些你可能需要的网站…简介(建议阅读)📘   学习编程以及运行我上传的程序所需软件🧑‍💻 计算器(貌似啥都算不了)😅 *此网站由Lantern Studio进行更新和维护.      &#x2F;&#x2F;alert(&quot;最近本人因为学业繁忙,此网站将暂时暂停更新(指没有新程序上传),你可以时常访问网站,如果没有出现此消息,则恢复更新&quot;)      &#x2F;&#x2F;document.getElement">
+<meta property="og:description" content="一些你可能需要的网站…简介(建议阅读)📘   学习编程以及运行我上传的程序所需软件🧑‍💻 计算器(貌似啥都算不了)😅 *此网站由Lantern Studio进行更新和维护.      &#x2F;&#x2F;alert(&quot;最近本人因为学业繁忙,此网站将暂时暂停更新(指没有新程序上传),你可以时常访问网站,如果没有出现此消息,则恢复更新&quot;)      &#x2F;&#x2F;document.getE">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-21T11:50:50.037Z">
-<meta property="article:modified_time" content="2023-05-20T07:25:38.826Z">
+<meta property="article:modified_time" content="2023-05-21T00:24:32.631Z">
 <meta property="article:author" content="Ayz">
 <meta name="twitter:card" content="summary">
 
@@ -137,18 +137,22 @@
         <span class="column is-narrow">
             
             
-            15 minutes read (About 2299 words)
+            15 minutes read (About 2307 words)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"><br><i id="about_"><b></b></i><br><input id="button" type="button" value="切换主题" onclick="change_style();"></p>
+<video>
+  <source src="">
+</video>
+
 <!--
-        <div id="aplayer-ZjlvlJzi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-ZAfgSTCk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[]};
-				  options.element = document.getElementById("aplayer-ZjlvlJzi");
+				  options.element = document.getElementById("aplayer-ZAfgSTCk");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -284,11 +288,12 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
     get_theme()
     last_theme=chosen_item
     
-    var item='',last_='',_last_='';
+    var item='',last_='',_last_='',last_three='';
     function getimg(){
         function choose(){item = chosen_item[0][Math.floor(Math.random()*chosen_item[0].length)];}
         choose()
-        while(item==last_ || item==_last_) choose()
+        while(item==last_ || item==_last_ || item==last_three) choose()
+        last_three=_last_
         _last_=last_;
         last_=item;
         return item;
@@ -310,7 +315,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
             name: chosen_item[1][0][1],           //歌曲名称
             artist: chosen_item[1][0][2],       //歌曲作者
             url: chosen_item[1][0][0],         //歌曲源文件地址
-            cover:chosen_item[0][1]
+            cover:chosen_item[0][0]
         }]
     });
     function change_style(){
@@ -336,7 +341,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
             name: chosen_item[1][0][1],           //歌曲名称
             artist: chosen_item[1][0][2],       //歌曲作者
             url: chosen_item[1][0][0],         //歌曲源文件地址
-            cover:chosen_item[0][1]
+            cover:chosen_item[0][0]
         }]
         });
     }
