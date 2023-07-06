@@ -63,6 +63,8 @@
 
 
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="R🐟Ze Website" type="application/atom+xml">
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 <body>
     
@@ -95,7 +97,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="Buscar" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -132,13 +134,22 @@
         <span class="column is-narrow">
             
             
-            15 minutes read (About 2304 words)
+            15 minutes de lectura (Alrededor de 2307 palabras)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><p><img id="imgs" src="" style="opacity:1;"><br><i id="about_"><b></b></i><br><input id="button" type="button" value="切换主题" onclick="change_style();"></p>
+<!--
+        <div id="aplayer-PfMsggPz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+			  <script>
+				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[]};
+				  options.element = document.getElementById("aplayer-PfMsggPz");
+				  var ap = new APlayer(options);
+			    window.aplayers || (window.aplayers = []);
+				  window.aplayers.push(ap);
+			  </script>-->
 <div id="aplayer"></div>
 <script src="APlayer.min.js"></script>
 
@@ -549,7 +560,7 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Escribe algo..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -562,10 +573,10 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
         var INSIGHT_CONFIG = {
             TRANSLATION: {
                 POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                PAGES: 'Páginas',
+                CATEGORIES: 'Categorías',
                 TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                UNTITLED: '(Sin título)',
             },
             CONTENT_URL: '/content.json',
         };
